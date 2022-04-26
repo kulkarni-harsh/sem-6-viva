@@ -1,21 +1,17 @@
-x=input("Enter String ")
+str=input("Enter String ")
+if "bab" in str:
+    print('Yes')
+else:
+    print('No')
+#recognize the lanuage of string with substring bab
 state=0
-for i in x:
-    if state==0:
-        if i=='a':
-            state=0     #self loop
-        else:
-            state=1
-    elif state==1:
-        if i=='a':
-            state=2
-        else:
-            state=1     #self loop
-    elif state==2:
-        if i=='a':
-            state=0
-        else:
-            state=3
-    
-
-print('The String contains bab'if state==3 else 'The String does not contain bab')
+for i in range(0,len(str)):
+    if str[i]=='b':
+        if str[i-1]=='a':
+           if str[i-2]=='b':
+                state=1
+        
+if state==1:
+    print('Yes1')
+else:
+    print('No1')

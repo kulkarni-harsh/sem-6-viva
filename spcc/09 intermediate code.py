@@ -20,7 +20,7 @@ for i in range(len(code)):
         if code[i][j] in cmd_val:
             val = cmd_val[code[i][j]]
             print(f'({val[0]},{val[1]})',end='')
-            if code[i][j] is 'LTORG':
+            if code[i][j] == 'LTORG':
                 print(f'(DL,2)(C,1)',end='')
         elif code[i][j] in rg_val:
             val = rg_val[code[i][j]]
