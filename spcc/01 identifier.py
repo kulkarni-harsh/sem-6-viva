@@ -1,10 +1,15 @@
-identifier=input("Enter Identifier ")
-state=0
-if identifier[0]=='_' or identifier[0].isalpha():
-    state=1
+st=input('Enter String:')
+print(st)
+if st[0]=='_' or st[0].isalpha():
+    if '_' in st:
+        st1= st.replace('_','')
+        if st1.isalnum():
+            print('YES')
+        else:
+            print('NO')
+    elif st.isalnum():
+            print('YES')
+    else:
+        print('NO')
 else:
-    state=2
-if state==1:
-    print("The Identifier is valid")
-else:
-    print("The Identifier is Invalid")
+    print('NO')

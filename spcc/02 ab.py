@@ -9,7 +9,7 @@ for i in x:
     elif state==1:
         if i=='a':
             state=1     #self loop
-        else:
+        elif i=='b':
             state=2
     else:
         if i=='a':
